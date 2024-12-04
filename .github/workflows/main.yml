@@ -1,0 +1,19 @@
+name: Basic GitHub Action Template
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a simple shell command
+        run: |
+          echo "Hello, GitHub Actions!"
+          echo "This is a simple action running on the workflow!"
